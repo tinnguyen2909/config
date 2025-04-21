@@ -6,9 +6,9 @@
 set_from_resource $wm.binding.focus_parent wm.binding.focus_parent a
 bindsym $mod+$wm.binding.focus_parent focus parent
 
-## Navigate // Relative Child // <> z ##/
-set_from_resource $wm.binding.focus_child wm.binding.focus_child z
-bindsym $mod+$wm.binding.focus_child focus child
+##? Navigate // Relative Child // <> z ##/
+#set_from_resource $wm.binding.focus_child wm.binding.focus_child z
+#bindsym $mod+$wm.binding.focus_child focus child
 
 ## Navigate // Relative Window // <> ↑ ↓ ← → ##
 bindsym $mod+Left focus left
