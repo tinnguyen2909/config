@@ -82,11 +82,11 @@ bindsym $mod+$wm.binding.scratchpad scratchpad show
 
 
 ## Navigate // List windows in scratchpad // <> s ##
-bindsym $mod+s exec --no-startup-id ~/show_scratchpad.sh
+bindsym $mod+s exec --no-startup-id ~/.config/regolith3/scripts/show_scratchpad.sh
 
 
 ## Navigate // Jump to window // <> / ##
-bindsym $mod+question exec i3-input -F 'exec ~/focus_window.sh %s' -P 'Jump to: '
+bindsym $mod+question exec i3-input -F 'exec ~/.config/regolith3/scripts/focus_window.sh %s' -P 'Jump to: '
 
 
 ## Navigate // Move workspace to next // <> x ##
