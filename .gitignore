@@ -1,0 +1,5 @@
+# ignore secrets.sh
+secrets.sh
+local.sh
+
+.env
