@@ -5,3 +5,16 @@ bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark: '
 for_window [class="Slack"] floating enable
 for_window [class="Spotube"] floating enable
 for_window [class="Spotify"] floating enable
+for_window [class="Cursor"] floating enable
+
+workspace "$ws1" output primary
+workspace "$ws2" output primary
+workspace "$ws3" output primary
+workspace "$ws4" output primary
+workspace "$ws5" output primary
+
+workspace "$ws6" output nonprimary
+workspace "$ws7" output nonprimary
+workspace "$ws8" output nonprimary
+workspace "$ws9" output nonprimary
+workspace "$ws10" output nonprimary
