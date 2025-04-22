@@ -88,6 +88,8 @@ bindsym $mod+s exec --no-startup-id ~/.config/regolith3/scripts/show_scratchpad.
 ## Navigate // Jump to window // <> / ##
 bindsym $mod+question exec i3-input -F 'exec ~/.config/regolith3/scripts/focus_window.sh %s' -P 'Jump to: '
 
-
 ## Navigate // Move workspace to next // <> x ##
 bindsym $mod+x move workspace to output next
+
+## Navigate // Focus to next output // <> ` ##
+bindsym $mod+grave focus output next

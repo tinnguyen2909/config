@@ -3,3 +3,13 @@ regolith.wallpaper.file:
 regolith.wallpaper.color.primary: #222222
 regolith.wallpaper.color.secondary:
 regolith.wallpaper.color.shading.type:
+wm.workspace.01.name:	1:www
+wm.workspace.02.name:	2
+wm.workspace.03.name:	3
+wm.workspace.04.name:	4
+wm.workspace.05.name:	5
+wm.workspace.06.name:	6
+wm.workspace.07.name:	7
+wm.workspace.08.name:	8
+wm.workspace.09.name:	9
+wm.workspace.09.name:	10
