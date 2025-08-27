@@ -1,3 +1,1 @@
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
--- short duration to make pressing ESC feels more responsive
--- vim.opt.ttimeoutlen = 50
+vim.keymap.set("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
