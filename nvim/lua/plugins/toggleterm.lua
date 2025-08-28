@@ -1,5 +1,5 @@
 return {
-	"akinsho/toggleterm.nvim",
+	"tinnguyen2909/toggleterm.nvim",
 	version = "*",
 	config = true,
 }

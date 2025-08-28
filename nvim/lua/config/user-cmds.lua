@@ -27,3 +27,7 @@ vim.api.nvim_create_user_command("DumpOptions", function()
 		border = "single",
 	})
 end, {})
+
+vim.api.nvim_create_user_command("Claude", function()
+	require("tin.cc").toggle()
+end, {})
