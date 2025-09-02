@@ -12,3 +12,5 @@ vim.o.wrap = false
 vim.o.linebreak = true
 vim.o.list = true
 vim.o.listchars = [[tab:> ,trail:-,nbsp:+]]
+
+vim.o.messagesopt = "wait:2000,history:1000"
