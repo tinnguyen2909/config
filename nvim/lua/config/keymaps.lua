@@ -1,4 +1,5 @@
 local telescope_utils = require("config.telescope-utils")
+local dropbar_utils = require("utils.dropbar_utils")
 
 -- Terminal mode
 vim.keymap.set("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
@@ -24,7 +25,7 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostic
 vim.keymap.set("n", "<leader>t", "<cmd>Telescope<cr>", { desc = "Open Telescope" })
 -- vim.keymap.set("n", "<leader>ff", telescope_utils.file_browser_with_select, { desc = "Find files" })
 vim.keymap.set("n", "<space>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep_args<cr>", { desc = "Live grep with args" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recent files" })
@@ -50,3 +51,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 vim.keymap.set("n", "[b", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
+
+-- Dropbar
+dropbar_utils.setup_keymaps()
