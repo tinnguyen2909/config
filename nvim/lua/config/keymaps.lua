@@ -64,3 +64,7 @@ vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "Toggle Zen Mode" 
 
 -- Dropbar
 dropbar_utils.setup_keymaps()
+
+-- Copy text
+vim.keymap.set("n", "<C-c>", "<cmd>CopyText<cr>", { desc = "Copy selected text or entire buffer" })
+vim.keymap.set("v", "<C-c>", "<cmd>CopyText<cr>", { desc = "Copy selected text" })
