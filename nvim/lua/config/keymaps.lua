@@ -3,6 +3,7 @@ local dropbar_utils = require("utils.dropbar_utils")
 
 -- Terminal mode
 vim.keymap.set("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("t", "<C-Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- LSP keymaps
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
@@ -23,7 +24,12 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostic
 
 -- Telescope
 vim.keymap.set("n", "<leader>t", "<cmd>Telescope<cr>", { desc = "Open Telescope" })
--- vim.keymap.set("n", "<leader>ff", telescope_utils.file_browser_with_select, { desc = "Find files" })
+vim.keymap.set(
+	"n",
+	"<leader><Space>",
+	"<cmd>Telescope builtin include_extensions=true<cr>",
+	{ desc = "Open Telescope" }
+)
 vim.keymap.set("n", "<space>ff", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep_args<cr>", { desc = "Live grep with args" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })

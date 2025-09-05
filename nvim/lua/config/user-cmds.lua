@@ -31,3 +31,7 @@ end, {})
 vim.api.nvim_create_user_command("Claude", function(opts)
 	require("tin.cc").toggle(opts.args)
 end, { nargs = "*" })
+
+vim.api.nvim_create_user_command("FloatTerm", function(opts)
+	require("toggleterm").toggle(nil, nil, nil, "float")
+end, {})
