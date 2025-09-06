@@ -15,6 +15,7 @@ return {
 				"html",
 				"css",
 				"jsonc",
+				"tsx",
 			},
 			highlight = {
 				enable = true,

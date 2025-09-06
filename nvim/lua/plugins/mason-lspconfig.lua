@@ -1,9 +1,9 @@
-local packages_to_install = { "stylua" }
+local packages_to_install = { "stylua", "prettier" }
 
 return {
 	"mason-org/mason-lspconfig.nvim",
 	opts = {
-		ensure_installed = { "lua_ls", "pyright", "ruff" },
+		ensure_installed = { "lua_ls", "pyright", "ruff", "ts_ls" },
 	},
 	dependencies = {
 		{
