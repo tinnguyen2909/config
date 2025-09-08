@@ -119,3 +119,6 @@ MY_CUSTOM="$HOME/.zsh"
 
 # Load local configuration local.sh for specific machine (not tracked by git)
 [ -f "$MY_CUSTOM/local.sh" ] && source "$MY_CUSTOM/local.sh"
+
+. "$HOME/.local/bin/env"
+

@@ -1,4 +1,18 @@
 # source python virtual environment
-alias senv="if [ -d .venv ]; then source .venv/bin/activate; else source venv/bin/activate; fi"
-alias loadenv='[ -f .env ] && { set -a; source .env 2>/dev/null; set +a; echo ".env loaded."; } || echo "No .env file found."'
-alias loadenv_dev='[ -f .dev.env ] && { set -a; source .dev.env 2>/dev/null; set +a; echo ".dev.env loaded."; } || echo "No .dev.env file found."'
+alias senv='
+find_and_source_venv() {
+    local dir="$PWD"
+    while [[ "$dir" != "/" ]]; do
+        if [[ -f "$dir/.venv/bin/activate" ]]; then
+            source "$dir/.venv/bin/activate"
+            echo "Activated virtual environment: $dir/.venv"
+            return 0
+        fi
+        dir="$(dirname "$dir")"
+    done
+    echo "No .venv found in current directory or parent directories"
+    return 1
+}
+find_and_source_venv'
+alias loadenv='[ -f .env ] && export $(grep -v "^#" .env | grep -v "^$" | xargs) || echo ".env file not found"'
+alias loadenv_dev='[ -f .env.dev ] && export $(grep -v "^#" .env.dev | grep -v "^$" | xargs) || echo ".env.dev file not found"'
