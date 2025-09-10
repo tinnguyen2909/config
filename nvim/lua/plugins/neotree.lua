@@ -8,5 +8,29 @@ return {
 			"nvim-tree/nvim-web-devicons", -- optional, but recommended
 		},
 		lazy = false, -- neo-tree will lazily load itself
+		opts = {
+			sources = { "filesystem", "buffers", "git_status", "document_symbols" },
+			document_symbols = {
+				follow_cursor = true,
+				client_filters = "first",
+				renderers = {
+					symbol = {
+						{ "indent", with_expanders = true },
+						{ "kind_icon", default = "?" },
+						{
+							"container",
+							content = {
+								{ "name", zindex = 10 },
+								{
+									"kind_name",
+									zindex = 20,
+									align = "right",
+								},
+							},
+						}
+					},
+				},
+			},
+		},
 	},
 }

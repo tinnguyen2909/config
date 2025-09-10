@@ -96,3 +96,21 @@ vim.api.nvim_create_user_command("CopyText", function(opts)
 		vim.notify("Copied entire buffer to clipboard")
 	end
 end, { range = true })
+
+-- Git blame commands
+vim.api.nvim_create_user_command("Blame", function()
+	require("gitsigns").blame()
+end, { desc = "Open gitsigns blame buffer" })
+
+vim.api.nvim_create_user_command("BlameLine", function()
+	require("gitsigns").blame_line({ full = true })
+end, { desc = "Show blame for current line" })
+
+-- Neo-tree commands
+vim.api.nvim_create_user_command("FloatTree", function()
+	vim.cmd("Neotree float reveal_file=" .. vim.fn.expand("%:p") .. " reveal_force_cwd")
+end, { desc = "Open Neo-tree in float mode revealing current file" })
+
+vim.api.nvim_create_user_command("FloatSymbols", function()
+	vim.cmd("Neotree float document_symbols")
+end, { desc = "Open Neo-tree document symbols in float mode" })
