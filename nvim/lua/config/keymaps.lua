@@ -68,3 +68,12 @@ dropbar_utils.setup_keymaps()
 -- Copy text
 vim.keymap.set("n", "<C-c>", "<cmd>CopyText<cr>", { desc = "Copy selected text or entire buffer" })
 vim.keymap.set("v", "<C-c>", "<cmd>CopyText<cr>", { desc = "Copy selected text" })
+
+-- Clear search highlight with ESC (only when search is active)
+vim.keymap.set("n", "<Esc>", function()
+  if vim.v.hlsearch == 1 then
+    vim.cmd("nohlsearch")
+  else
+    return "<Esc>"
+  end
+end, { expr = true, desc = "Clear search highlight" })
