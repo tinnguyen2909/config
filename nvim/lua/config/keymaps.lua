@@ -58,7 +58,6 @@ vim.keymap.set("n", "[b", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 
-
 -- Zen Mode
 vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "Toggle Zen Mode" })
 
@@ -71,9 +70,9 @@ vim.keymap.set("v", "<C-c>", "<cmd>CopyText<cr>", { desc = "Copy selected text" 
 
 -- Clear search highlight with ESC (only when search is active)
 vim.keymap.set("n", "<Esc>", function()
-  if vim.v.hlsearch == 1 then
-    vim.cmd("nohlsearch")
-  else
-    return "<Esc>"
-  end
+	if vim.v.hlsearch == 1 then
+		vim.cmd("nohlsearch")
+	else
+		return "<Esc>"
+	end
 end, { expr = true, desc = "Clear search highlight" })
