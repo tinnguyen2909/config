@@ -25,7 +25,7 @@ run_init_script() {
     if [[ -f "$script_path" ]]; then
         echo "Initializing $component..."
         chmod +x "$script_path"
-        if "$script_path"; then
+        if "$script_path" "$SCRIPT_DIR/$component"; then
             echo "$component initialized successfully"
         else
             echo "Failed to initialize $component"

@@ -49,8 +49,12 @@ else
     echo "zsh-vi-mode already installed"
 fi
 
-# Get the directory where this script is located
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Get the directory - use argument if provided, otherwise use script location
+if [[ -n "$1" ]]; then
+    SCRIPT_DIR="$1"
+else
+    SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+fi
 CONFIG_DIR="$(dirname "$SCRIPT_DIR")"
 
 # Create symbolic links
