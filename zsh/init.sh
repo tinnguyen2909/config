@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 echo "Initializing Zsh configuration..."
 
 # Check if Oh My Zsh is installed

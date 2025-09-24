@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 echo "Initializing Tmux configuration..."
 
 # Check if tmux is installed

@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # User management script - Add/Remove users with home directories
 # Usage: ./user-management.sh [add|remove] [username]
 
@@ -73,7 +71,7 @@ add_user() {
     fi
 
     # Create user with home directory
-    if useradd -m -s /bin/bash "$username"; then
+    if useradd -m -s /usr/bin/zsh "$username"; then
         print_success "Created user $username with home directory"
     else
         print_error "Failed to create user $username"
