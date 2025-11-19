@@ -65,8 +65,9 @@ vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "Toggle Zen Mode" 
 dropbar_utils.setup_keymaps()
 
 -- Copy text
-vim.keymap.set("n", "<C-c>", "<cmd>CopyText<cr>", { desc = "Copy selected text or entire buffer" })
-vim.keymap.set("v", "<C-c>", "<cmd>CopyText<cr>", { desc = "Copy selected text" })
+vim.keymap.set({ "v", "x" }, "<C-c>", ":CopyText<CR>", {
+	desc = "Copy visual selection to clipboard",
+})
 
 -- Clear search highlight with ESC (only when search is active)
 vim.keymap.set("n", "<Esc>", function()
